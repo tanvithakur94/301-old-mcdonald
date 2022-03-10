@@ -16,7 +16,6 @@ list_of_columns =['beef', 'pork', 'poultry',
        'dairy', 'fruits fresh', 'fruits proc', 'total fruits', 'veggies fresh',
        'veggies proc', 'total veggies', 'corn', 'wheat', 'cotton']
 
-
 ########## Set up the chart
 
 import pandas as pd
