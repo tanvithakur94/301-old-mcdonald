@@ -12,10 +12,9 @@ tabtitle = 'Old McDonald'
 sourceurl = 'https://plot.ly/python/choropleth-maps/'
 githublink = 'https://github.com/austinlasseter/agriculture-exports-map'
 # here's the list of possible columns to choose from.
-list_of_columns =['total exports', 'beef', 'pork', 'poultry',
+list_of_columns =['beef', 'pork', 'poultry',
        'dairy', 'fruits fresh', 'fruits proc', 'total fruits', 'veggies fresh',
        'veggies proc', 'total veggies', 'corn', 'wheat', 'cotton']
-
 
 
 ########## Set up the chart
@@ -32,7 +31,7 @@ app.title=tabtitle
 ########### Set up the layout
 
 app.layout = html.Div(children=[
-    html.H1('2011 Agricultural Exports, by State'),
+    html.H1('2012 Agricultural Exports, by State',style={'textAlign': 'center'}),
     html.Div([
         html.Div([
                 html.H6('Select a variable for analysis:'),
@@ -56,8 +55,8 @@ app.layout = html.Div(children=[
 @app.callback(Output('figure-1', 'figure'),
              [Input('options-drop', 'value')])
 def make_figure(varname):
-    mygraphtitle = f'Exports of {varname} in 2011'
-    mycolorscale = 'PiYG' #'ylorrd' # Note: The error message will list possible color scales.
+    mygraphtitle = f'Exports of {varname} in 2012'
+    mycolorscale = 'RdPu' #'ylorrd' # Note: The error message will list possible color scales.
     mycolorbartitle = "Millions USD"
 
     data=go.Choropleth(
