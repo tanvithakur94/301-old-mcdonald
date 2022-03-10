@@ -12,8 +12,7 @@ tabtitle = 'Old McDonald'
 sourceurl = 'https://plot.ly/python/choropleth-maps/'
 githublink = 'https://github.com/austinlasseter/agriculture-exports-map'
 # here's the list of possible columns to choose from.
-list_of_columns =['fruits', 'veggies fresh',
-       'veggies proc', 'corn', 'wheat', 'cotton', 'strawberry']
+list_of_columns =['fruits', 'veggies fresh', 'corn', 'wheat', 'cotton', 'strawberry']
 
 #list_of_columns =['beef', 'pork', 'poultry',
        #'dairy', 'fruits fresh', 'fruits proc', 'total fruits', 'veggies fresh',
@@ -36,11 +35,11 @@ app.layout = html.Div(children=[
     html.H1('2012 Agricultural Exports, by State',style={'textAlign': 'center'}),
     html.Div([
         html.Div([
-                html.H6('Select a variable for analysis:', style={'textAlign': 'center'}),
+                html.H6('Select a variable for analysis:', style={'textAlign': 'center', 'color': '#006400'}),
                 dcc.Dropdown(
                     id='options-drop',
                     options=[{'label': i, 'value': i} for i in list_of_columns],
-                    value='corn'
+                    value='wheat'
                 ),
         ], className='two columns'),
         html.Div([dcc.Graph(id='figure-1'),
