@@ -32,10 +32,10 @@ app.title=tabtitle
 ########### Set up the layout
 
 app.layout = html.Div(children=[
-    html.H1('2012 Agricultural Exports, by State',style={'textAlign': 'center'}),
+    html.H1('2012 Agricultural Exports, by State',style={'textAlign': 'center', 'color': '#C71585'}),
     html.Div([
         html.Div([
-                html.H6('Select a variable for analysis:', style={'textAlign': 'center', 'color': '#006400'}),
+                html.H6('Select a variable for analysis:', style={'textAlign': 'center', 'color': '#C71585'}),
                 dcc.Dropdown(
                     id='options-drop',
                     options=[{'label': i, 'value': i} for i in list_of_columns],
